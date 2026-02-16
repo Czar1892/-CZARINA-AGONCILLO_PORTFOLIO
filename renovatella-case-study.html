@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovatella.ae SEO Case Study - Czarina Agoncillo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #116a93;
+            --primary-dark: #0d5373;
+            --primary-light: #1a8bc4;
+            --accent: #8fce00;
+            --text-dark: #141322;
+            --text-medium: #585e6d;
+            --text-light: #9095a3;
+            --bg-light: #f6f7f9;
+            --bg-white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            --shadow-sm: 0 2px 8px rgba(17, 106, 147, 0.1);
+            --shadow-md: 0 8px 24px rgba(17, 106, 147, 0.15);
+            --shadow-lg: 0 16px 48px rgba(17, 106, 147, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav .back-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        nav .back-link:hover {
+            color: var(--primary);
+        }
+
+        /* Hero */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 2rem 4rem;
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .meta-item strong {
+            display: block;
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-bottom: 0.3rem;
+        }
+
+        .meta-item span {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        /* Key Metrics Banner */
+        .metrics-banner {
+            background: var(--gradient);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: -4rem auto 5rem;
+            max-width: 1400px;
+            box-shadow: var(--shadow-lg);
+            color: white;
+            text-align: center;
+        }
+
+        .metrics-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .metric-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .metric-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Overview Section */
+        .overview {
+            background: white;
+            border-radius: 20px;
+            padding: 4rem;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-medium);
+            line-height: 1.9;
+            margin-bottom: 2rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 4rem;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section p {
+            color: var(--text-medium);
+            line-height: 1.9;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .content-section li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--text-medium);
+            line-height: 1.8;
+            border-bottom: 1px solid #f6f7f9;
+        }
+
+        .content-section li:last-child {
+            border-bottom: none;
+        }
+
+        .content-section li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.3rem;
+            top: 0.9rem;
+        }
+
+        .content-section li strong {
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid var(--primary);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-box li {
+            padding: 0.7rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-medium);
+            border: none;
+        }
+
+        .highlight-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0.7rem;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Results Grid */
+        .results-section {
+            background: var(--text-dark);
+            color: white;
+            padding: 5rem 2rem;
+            margin: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .results-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(17, 106, 147, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(17, 106, 147, 0.3) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .results-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .results-section .section-title {
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .result-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .result-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-8px);
+        }
+
+        .result-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Website Link */
+        .website-link {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            margin: 3rem 0;
+        }
+
+        .website-link h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .website-link p {
+            color: var(--text-medium);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 20px;
+            margin: 5rem 0;
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .cta p {
+            color: var(--text-medium);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-meta {
+                gap: 2rem;
+            }
+
+            .metrics-banner {
+                padding: 2rem;
+                margin-top: -2rem;
+            }
+
+            .overview,
+            .content-section {
+                padding: 2.5rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .hero {
+                padding: 4rem 1.5rem 3rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .metrics-grid,
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview,
+            .content-section {
+                padding: 2rem;
+            }
+
+            .metric-number,
+            .result-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">CZARINA AGONCILLO</a>
+            <a href="index.html#projects" class="back-link">
+                ← Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-tag">SEO & DIGITAL MARKETING</div>
+            <h1>Renovatella.ae</h1>
+            <p class="subtitle">Comprehensive SEO strategy that tripled organic traffic and established market dominance for UAE's leading home renovation platform</p>
+            
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <strong>CLIENT</strong>
+                    <span>Renovatella.ae</span>
+                </div>
+                <div class="meta-item">
+                    <strong>SERVICES</strong>
+                    <span>SEO & Content Marketing</span>
+                </div>
+                <div class="meta-item">
+                    <strong>TIMELINE</strong>
+                    <span>6 Months</span>
+                </div>
+                <div class="meta-item">
+                    <strong>LOCATION</strong>
+                    <span>United Arab Emirates</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics Banner -->
+    <div class="container">
+        <div class="metrics-banner">
+            <h2>Campaign Impact at a Glance</h2>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-number">3x</div>
+                    <div class="metric-label">Organic Traffic Growth</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number">50+</div>
+                    <div class="metric-label">Page 1 Rankings</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number">+35%</div>
+                    <div class="metric-label">Click-Through Rate</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number">+120%</div>
+                    <div class="metric-label">Lead Generation</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview Section -->
+    <section>
+        <div class="container">
+            <div class="overview">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="section-subtitle">
+                    Comprehensive SEO strategy implemented for Renovatella.ae to increase online visibility, improve organic traffic, 
+                    and generate more leads from search engines. The campaign targeted high-intent keywords relevant to home renovation 
+                    services in UAE.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section style="background: white; padding: 5rem 0;">
+        <div class="container">
+            <div class="content-section" style="box-shadow: none;">
+                <h2>The Challenge</h2>
+                <p>
+                    The Renovatella website had minimal organic visibility and stiff competition in the UAE renovation market. 
+                    On-page SEO was incomplete, content was thin, and backlinks were scarce.
+                </p>
+                
+                <div class="highlight-box">
+                    <h3>Key Problems Identified</h3>
+                    <ul>
+                        <li>Minimal organic search visibility in competitive UAE market</li>
+                        <li>Incomplete on-page SEO optimization</li>
+                        <li>Thin content that didn't address user search intent</li>
+                        <li>Scarce backlink profile with low domain authority</li>
+                        <li>Strong competition from established renovation companies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Strategy -->
+    <section>
+        <div class="container">
+            <div class="content-section">
+                <h2>The Solution</h2>
+                <p>
+                    I developed a comprehensive, multi-faceted SEO campaign that addressed every aspect of search visibility. 
+                    The strategy was data-driven and tailored specifically to the UAE renovation market.
+                </p>
+
+                <ul>
+                    <li><strong>Comprehensive Keyword Research:</strong> Targeted high-intent renovation keywords specific to UAE market and local search queries</li>
+                    <li><strong>On-Page SEO Optimization:</strong> Optimized meta tags, headings, internal linking, and content structure across all pages</li>
+                    <li><strong>High-Quality Content Creation:</strong> Created valuable blog content targeting local search queries and addressing customer pain points</li>
+                    <li><strong>Authoritative Backlinks:</strong> Built quality backlinks and local citations to strengthen domain authority</li>
+                    <li><strong>Performance Monitoring:</strong> Continuously monitored performance using Google Analytics and Search Console to iterate quickly</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="section-title">Exceptional Results</h2>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">3x</div>
+                    <div class="result-label">Organic Traffic Increase</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">50+</div>
+                    <div class="result-label">First Page Rankings</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">35%</div>
+                    <div class="result-label">Higher CTR</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">120%</div>
+                    <div class="result-label">More Qualified Leads</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Results -->
+    <section>
+        <div class="container">
+            <div class="content-section">
+                <h2>Results & Impact</h2>
+                <p>
+                    The campaign successfully tripled organic traffic in six months. Over 50 competitive keywords reached 
+                    first-page rankings. The website also saw a 35% increase in click-through rates from search results, 
+                    driving more qualified leads and boosting Renovatella's online presence.
+                </p>
+
+                <ul>
+                    <li><strong>Organic Traffic:</strong> Successfully tripled organic traffic within 6 months</li>
+                    <li><strong>Keyword Rankings:</strong> Achieved 50+ competitive keywords on first page of Google</li>
+                    <li><strong>Click-Through Rate:</strong> Improved CTR by 35% through optimized meta descriptions and titles</li>
+                    <li><strong>Lead Generation:</strong> 120% increase in qualified lead submissions from organic search</li>
+                    <li><strong>Domain Authority:</strong> Significantly improved domain authority through quality backlinks</li>
+                    <li><strong>Market Position:</strong> Established Renovatella as a visible player in UAE renovation market</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Link -->
+    <section>
+        <div class="container">
+            <div class="website-link">
+                <h3>Visit the Live Website</h3>
+                <p>See the results of this SEO campaign in action</p>
+                <a href="https://renovatella.ae" target="_blank" class="btn">Visit Renovatella.ae →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+        <div class="container">
+            <div class="cta">
+                <h2>Ready to Dominate Search Results?</h2>
+                <p>Let's create an SEO strategy that drives real business growth</p>
+                <a href="index.html#contact" class="btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Czarina Agoncillo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
