@@ -1,0 +1,585 @@
+<!-- ========================================
+     PORTFOLIO CASE STUDY SNIPPET
+     Copy this entire section into your portfolio
+     Replace placeholder content with your actual project details
+     ======================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study - Your Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========================================
+           CASE STUDY STYLES
+           These styles are scoped to .case-study-section
+           You can reuse this snippet multiple times
+           ======================================== */
+        
+        .case-study-section {
+            font-family: 'DM Sans', sans-serif;
+            color: #141322;
+            background: #f6f7f9;
+            padding: 4rem 2rem;
+        }
+
+        .case-study-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Back Button */
+        .case-study-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #116a93;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            transition: all 0.3s ease;
+        }
+
+        .case-study-back:hover {
+            color: #0d5373;
+            transform: translateX(-4px);
+        }
+
+        .case-study-back::before {
+            content: '←';
+            font-size: 1.2rem;
+        }
+
+        /* Header Section */
+        .case-study-header {
+            margin-bottom: 4rem;
+        }
+
+        .case-study-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #116a93 0%, #1a8bc4 100%);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #141322;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study-description {
+            font-size: 1.25rem;
+            color: #585e6d;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        /* Featured Image */
+        .case-study-image {
+            width: 100%;
+            height: 500px;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            box-shadow: 0 16px 48px rgba(17, 106, 147, 0.2);
+        }
+
+        .case-study-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Placeholder for when no image is loaded */
+        .case-study-image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #116a93 0%, #1a8bc4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        /* Content Grid */
+        .case-study-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .case-study-overview,
+        .case-study-highlights {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(17, 106, 147, 0.15);
+        }
+
+        .case-study-content-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #141322;
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study-content-text {
+            color: #585e6d;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Highlights List */
+        .case-study-highlights-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .case-study-highlights-list li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: #585e6d;
+            line-height: 1.7;
+            border-bottom: 1px solid #f6f7f9;
+        }
+
+        .case-study-highlights-list li:last-child {
+            border-bottom: none;
+        }
+
+        .case-study-highlights-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #116a93 0%, #1a8bc4 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .case-study-highlights-list li strong {
+            color: #141322;
+            font-weight: 700;
+        }
+
+        /* Metrics Section */
+        .case-study-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .case-study-metric {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(17, 106, 147, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .case-study-metric:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(17, 106, 147, 0.2);
+        }
+
+        .case-study-metric-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #116a93;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-study-metric-label {
+            color: #585e6d;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Full Width Content */
+        .case-study-full-content {
+            background: white;
+            padding: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(17, 106, 147, 0.15);
+            margin-bottom: 4rem;
+        }
+
+        .case-study-full-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #141322;
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study-full-content p {
+            color: #585e6d;
+            line-height: 1.9;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study-full-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .case-study-full-content ul li {
+            padding: 0.7rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #585e6d;
+            line-height: 1.7;
+        }
+
+        .case-study-full-content ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #116a93;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Call to Action */
+        .case-study-cta {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #116a93 0%, #1a8bc4 100%);
+            border-radius: 20px;
+            color: white;
+            margin-top: 4rem;
+        }
+
+        .case-study-cta h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-cta p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .case-study-cta-button {
+            display: inline-block;
+            background: white;
+            color: #116a93;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .case-study-cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .case-study-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .case-study-title {
+                font-size: 2.5rem;
+            }
+
+            .case-study-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .case-study-image {
+                height: 350px;
+            }
+
+            .case-study-overview,
+            .case-study-highlights,
+            .case-study-full-content {
+                padding: 2rem;
+            }
+
+            .case-study-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .case-study-title {
+                font-size: 2rem;
+            }
+
+            .case-study-description {
+                font-size: 1.1rem;
+            }
+
+            .case-study-image {
+                height: 250px;
+            }
+
+            .case-study-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study-metric-number {
+                font-size: 2.5rem;
+            }
+
+            .case-study-cta h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================
+         CASE STUDY SECTION - START
+         ======================================== -->
+    
+    <section class="case-study-section">
+        <div class="case-study-container">
+            
+            <!-- Back to Projects Link -->
+            <a href="#projects" class="case-study-back">Back to Projects</a>
+            
+            <!-- Header -->
+            <div class="case-study-header">
+                <!-- Project Category Tag - Replace with your category -->
+                <span class="case-study-tag">Web Development</span>
+                
+                <!-- Project Title - Replace with your project name -->
+                <h1 class="case-study-title">E-Commerce Platform Redesign</h1>
+                
+                <!-- Short Description - Replace with your project description -->
+                <p class="case-study-description">
+                    A complete redesign and development of a multi-vendor marketplace that transformed user experience, 
+                    increased conversion rates by 45%, and improved site performance significantly.
+                </p>
+            </div>
+
+            <!-- Featured Image - Replace src with your image path -->
+            <div class="case-study-image">
+                <img src="IMG_4057.JPG" alt="E-Commerce Platform Redesign">
+                <!-- If no image yet, this placeholder will show -->
+                <!-- <div class="case-study-image-placeholder">📸</div> -->
+            </div>
+
+            <!-- Overview & Highlights Grid -->
+            <div class="case-study-content">
+                
+                <!-- Overview Section -->
+                <div class="case-study-overview">
+                    <h2 class="case-study-content-title">Project Overview</h2>
+                    <p class="case-study-content-text">
+                        <!-- Replace with your overview text -->
+                        This project involved a comprehensive overhaul of an existing e-commerce platform. 
+                        The goal was to modernize the user interface, optimize performance, and implement 
+                        new features that would drive sales and improve customer satisfaction.
+                    </p>
+                    <p class="case-study-content-text">
+                        Working closely with stakeholders, I led the design and development process from 
+                        initial research through launch, ensuring every decision was backed by data and 
+                        aligned with business objectives.
+                    </p>
+                </div>
+
+                <!-- Key Highlights -->
+                <div class="case-study-highlights">
+                    <h2 class="case-study-content-title">Key Highlights</h2>
+                    <ul class="case-study-highlights-list">
+                        <!-- Replace with your project highlights -->
+                        <li><strong>Modern UI/UX:</strong> Complete interface redesign with focus on usability and aesthetics</li>
+                        <li><strong>Performance:</strong> Reduced page load time from 4.2s to 1.8s through optimization</li>
+                        <li><strong>Mobile-First:</strong> Fully responsive design with enhanced mobile shopping experience</li>
+                        <li><strong>SEO Optimization:</strong> Implemented technical SEO improvements for better visibility</li>
+                        <li><strong>Analytics:</strong> Integrated comprehensive tracking and reporting dashboard</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Metrics Section -->
+            <div class="case-study-metrics">
+                <!-- Replace with your actual metrics -->
+                <div class="case-study-metric">
+                    <div class="case-study-metric-number">+45%</div>
+                    <div class="case-study-metric-label">Conversion Rate</div>
+                </div>
+                <div class="case-study-metric">
+                    <div class="case-study-metric-number">-60%</div>
+                    <div class="case-study-metric-label">Load Time</div>
+                </div>
+                <div class="case-study-metric">
+                    <div class="case-study-metric-number">+85%</div>
+                    <div class="case-study-metric-label">Mobile Traffic</div>
+                </div>
+                <div class="case-study-metric">
+                    <div class="case-study-metric-number">+120%</div>
+                    <div class="case-study-metric-label">User Engagement</div>
+                </div>
+            </div>
+
+            <!-- Full Width Content Section - The Challenge -->
+            <div class="case-study-full-content">
+                <h3>The Challenge</h3>
+                <p>
+                    <!-- Replace with your challenge description -->
+                    The existing platform was outdated, slow, and difficult to navigate. Customer feedback 
+                    consistently highlighted confusion with the checkout process and frustration with site 
+                    performance. The bounce rate was alarmingly high at 68%, and mobile users were abandoning 
+                    their carts at an even higher rate.
+                </p>
+                <p>Key problems identified:</p>
+                <ul>
+                    <li>Cluttered interface with poor information architecture</li>
+                    <li>Slow page load times affecting user experience and SEO</li>
+                    <li>Confusing checkout flow with too many steps</li>
+                    <li>Lack of mobile optimization despite 60% mobile traffic</li>
+                    <li>Inconsistent branding and design elements</li>
+                </ul>
+            </div>
+
+            <!-- Full Width Content Section - The Solution -->
+            <div class="case-study-full-content">
+                <h3>The Solution</h3>
+                <p>
+                    <!-- Replace with your solution description -->
+                    I approached this project with a user-centered design methodology, starting with comprehensive 
+                    user research and competitive analysis. The redesign focused on three core principles: 
+                    simplicity, speed, and conversion optimization.
+                </p>
+                <p>Key implementations:</p>
+                <ul>
+                    <li>Redesigned the entire interface with modern, clean aesthetics and clear visual hierarchy</li>
+                    <li>Optimized all images, implemented lazy loading, and leveraged browser caching</li>
+                    <li>Streamlined checkout from 5 steps to 2, with guest checkout option</li>
+                    <li>Built mobile-first responsive design with touch-optimized elements</li>
+                    <li>Created a comprehensive design system for consistency across all pages</li>
+                    <li>Implemented A/B testing framework to continuously optimize performance</li>
+                </ul>
+            </div>
+
+            <!-- Full Width Content Section - Results & Impact -->
+            <div class="case-study-full-content">
+                <h3>Results & Impact</h3>
+                <p>
+                    <!-- Replace with your results -->
+                    The redesigned platform launched after 12 weeks of intensive development and testing. 
+                    The results exceeded all expectations, with significant improvements across every key metric:
+                </p>
+                <ul>
+                    <li>Conversion rate increased by 45% within the first month</li>
+                    <li>Average order value grew by 32% due to improved product discovery</li>
+                    <li>Page load time decreased from 4.2 seconds to 1.8 seconds</li>
+                    <li>Mobile conversion rate improved by 78%</li>
+                    <li>Customer satisfaction score (CSAT) increased from 3.2 to 4.6 out of 5</li>
+                    <li>Cart abandonment rate dropped from 71% to 42%</li>
+                </ul>
+                <p>
+                    The client reported a 156% ROI within the first six months, with continued growth in 
+                    both traffic and revenue. The project set a new standard for their digital presence 
+                    and positioned them as a leader in their market.
+                </p>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="case-study-cta">
+                <h3>Let's Create Something Amazing Together</h3>
+                <p>Ready to transform your digital presence?</p>
+                <a href="#contact" class="case-study-cta-button">Get In Touch</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================
+         CASE STUDY SECTION - END
+         ======================================== -->
+
+</body>
+</html>
+
+
+<!-- ========================================
+     USAGE INSTRUCTIONS
+     ========================================
+     
+     TO USE THIS SNIPPET:
+     
+     1. Copy the <section class="case-study-section"> ... </section> 
+        and paste it into your main portfolio HTML
+     
+     2. Copy the <style> block and either:
+        a) Paste it into your main CSS file
+        b) Keep it in a <style> tag in the <head> of your page
+     
+     3. REPLACE PLACEHOLDERS:
+        - .case-study-tag: Change "Web Development" to your category
+        - .case-study-title: Your project name
+        - .case-study-description: Brief project intro
+        - .case-study-image img src: Your project image path
+        - .case-study-overview: Your project overview text
+        - .case-study-highlights-list: Your key features/highlights
+        - .case-study-metrics: Your project results/numbers
+        - All content sections: Your actual project details
+     
+     4. REUSABILITY:
+        - All classes are prefixed with "case-study-" to avoid conflicts
+        - You can duplicate this entire section for multiple projects
+        - Just change the content while keeping the structure
+     
+     5. CUSTOMIZATION:
+        - Colors: Change the CSS variables #116a93, #1a8bc4
+        - Fonts: Already using Playfair Display + DM Sans
+        - Spacing: Adjust padding/margin values in CSS
+        - Layout: Modify grid-template-columns for different layouts
+     
+     6. MOBILE RESPONSIVE:
+        - Already includes responsive breakpoints
+        - Tested on desktop, tablet, and mobile
+        - Grid layouts automatically stack on smaller screens
+     
+     ======================================== -->
