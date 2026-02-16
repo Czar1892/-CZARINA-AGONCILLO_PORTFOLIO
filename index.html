@@ -983,7 +983,7 @@
                         <h3>Healthcare Appointment System</h3>
                         <p>Custom booking system with payment integration. Streamlined appointment scheduling and reduced administrative overhead by 70%.</p>
                         <div class="project-links">
-                            <a href="healthcare-case.html">View Case Study →</a>
+                            <a href="healthcare-case.html" class="project-link">View Case Study →</a>
                         </div>
                     </div>
                 </div>
@@ -1036,7 +1036,58 @@
             </div>
         </div>
     </section>
+<!-- CSS -->
+<style>
+/* Container */
+.about-container {
+    display: flex;
+    align-items: center;       /* Vertical alignment */
+    justify-content: center;   /* Center horizontally */
+    gap: 30px;                 /* Space between text and image */
+    flex-wrap: wrap;           /* Wrap on smaller screens */
+    padding: 60px 20px;        /* Top-bottom and left-right padding */
+    background-color: #f9f9f9; /* Optional background */
+}
 
+/* Text styling */
+.about-text {
+    flex: 1;
+    min-width: 280px;          /* Prevent text from getting too narrow */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* Image container */
+.about-image {
+    flex: 1;
+    max-width: 400px;          /* Limit image size */
+}
+
+/* Image styling */
+.about-image img {
+    width: 100%;               /* Fill container */
+    height: 100%;
+    object-fit: cover;         /* Keep aspect ratio, crop if necessary */
+    border-radius: 12px;       /* Optional rounded corners */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Optional subtle shadow */
+    display: block;            /* Remove inline spacing */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;   /* Stack text and image */
+        text-align: center;       /* Center text */
+        padding: 40px 10px;       /* Reduce padding */
+    }
+
+    .about-image {
+        max-width: 90%;           /* Almost full width */
+        margin: 20px 0;           /* Space around image */
+    }
+}
+</style>
     <!-- Neurodivergent Section -->
     <section class="neurodivergent">
         <div class="container">
@@ -1044,7 +1095,7 @@
             <h2 class="section-title">Neurodivergent & Proud</h2>
             
             <div class="neurodivergent-intro">
-                <p>Being neurodivergent isn't a limitation—it's my competitive advantage. My brain works differently, and that's exactly what makes me exceptional at what I do.</p>
+                <p>Being neurodivergent isn't a limitationit's my competitive advantage. My brain works differently, and that's exactly what makes me exceptional at what I do.</p>
                 <p>I see patterns others miss, connect seemingly unrelated concepts, and approach problems from unique angles. This cognitive diversity enables me to create innovative solutions that conventional thinking would never discover.</p>
             </div>
 
