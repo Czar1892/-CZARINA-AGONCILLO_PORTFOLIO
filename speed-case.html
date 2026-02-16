@@ -441,14 +441,42 @@
                 </div>
             </div>
         </div>
-    </section>
+</section>
 
-    <div class="container">
-        <div class="image-section">
-            <img src="speed.jpg" alt="Site Speed Optimization Results" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="image-placeholder" style="display:none;">Performance Metrics Dashboard</div>
-        </div>
+<div class="container">
+    <div class="image-section">
+
+        <img src="speed.jpg" 
+             alt="Site Speed Optimization Results"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+        <div class="image-placeholder">Image preview: speed.jpg</div>
+
     </div>
+</div>
+
+<style>
+.image-section img{
+    width:100%;
+    max-width:700px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    display:block;
+}
+
+.image-placeholder{
+    display:none;
+    width:100%;
+    max-width:700px;
+    height:350px;
+    background:#f1f1f1;
+    border-radius:12px;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    color:#666;
+}
+</style>
 
     <section class="cta-section">
         <div class="container">
