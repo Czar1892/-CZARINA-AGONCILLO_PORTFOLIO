@@ -106,7 +106,7 @@ Current fonts are loaded from Google Fonts. To change them, update the link in t
 
 ## 📧 Contact
 
-- **Email**: hello@czarinaagoncillo.com
+- **Email**: czaragoncillo18@gmail.com
 - **LinkedIn**: [linkedin.com/in/czarina-agoncillo](https://linkedin.com/in/czarina-agoncillo)
 - **GitHub**: [github.com/czarina1892](https://github.com/czarina1892)
 
