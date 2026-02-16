@@ -390,7 +390,89 @@
             transform: translateX(4px);
         }
 
-        /* About Section */
+        <!-- About Section / Glassmorphism Mugshot -->
+<section id="mugshot">
+  <div class="mugshot-card">
+    <img src="your-photo.jpg" alt="Czarina Agoncillo" class="mugshot-photo">
+    <div class="mugshot-info">
+      <h3>Czarina Agoncillo</h3>
+      <p>Digital Strategist & Developer. I build web experiences that combine technical excellence with strategic marketing.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Glassmorphism Mugshot Section */
+.mugshot-card {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mugshot-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+}
+
+.mugshot-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.5);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.mugshot-card:hover .mugshot-photo {
+  transform: scale(1.05);
+}
+
+.mugshot-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #116a93;
+}
+
+.mugshot-info p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  color: #141322;
+  line-height: 1.6;
+}
+
+.about-content {
+  /* your other about section styles */
+}
+
+@media (max-width: 640px) {
+  .mugshot-card {
+    padding: 1.5rem;
+  }
+
+  .mugshot-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .mugshot-info h3 {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
+
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
